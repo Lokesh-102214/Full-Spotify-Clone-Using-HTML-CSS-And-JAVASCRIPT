@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listnify - Bollywood Workout</title>
+    <link rel="stylesheet" href="PlaylistIndi.css" />
+    <link rel="stylesheet" href="utility.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="sidebar.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="icon" type="image/x-icon"   href="spotify-app.ico">
+</head>
+
+<body>
+    <!-- Hamburger Menu -->
+    <button class="hamburger" id="hamburger">
+        <div class="hamburger-icon">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </div>
+    </button>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <header class="navbar">
+        <!-- Left: Logo and Home Button -->
+        <div class="navbar-left">
+            <img src="logo.svg" alt="Spotify" class="logo" />
+            <button class="home-button" onclick="window.location.href=`HomePage.html`">
+                <svg xmlns="http://www.w3.org/2000/svg" data-encore-id="icon" role="img" aria-hidden="true"
+                    class="e-9960-icon e-9960-baseline" viewBox="0 0 24 24">
+                    <path
+                        d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Center: Search Bar -->
+        <div class="search-bar ">
+
+            <button class="search-button">
+                <img src="search.svg" alt="Search" class="search-icon bold" />
+            </button>
+
+            <input type="text" placeholder="What do you want to play?">
+            <div class="divider"></div>
+            <button class="browse-button">
+                <img src="browse.svg" alt="Browse Icon" class="browse-icon" />
+            </button>
+
+        </div>
+
+        <!-- Right: Links + Login -->
+        <div class="navbar-right">
+            <nav class="nav-links">
+                <a href="#">Premium</a>
+                <a href="#">Support</a>
+                <a href="#">Download</a>
+                <div class="divider"></div>
+
+                <a href="#" id="small1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                        aria-hidden="true"
+                        style="vertical-align: middle; fill: currentColor; transform: translateY(-2px);">
+                        <path
+                            d="M4.995 8.745a.75.75 0 0 1 1.06 0L7.25 9.939V4a.75.75 0 0 1 1.5 0v5.94l1.195-1.195a.75.75 0 1 1 1.06 1.06L8 12.811l-.528-.528-.005-.005-2.472-2.473a.75.75 0 0 1 0-1.06z" />
+                        <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13z" />
+                    </svg>
+                    Install App</a>
+                <a href="#" id="small2">Sign up</a>
+            </nav>
+            <a href="#" class="login-btn">Log in</a>
+        </div>
+    </header>
+
+    <!-- ## Sidebar: Your Library and Footer Links -->
+    <!-- Sidebar -->
+    <div class="container ">
+        <main class="main-section ">
+            
+        </main>
+        <aside class="sidebar">
+            <!-- Header -->
+            <div class="library-header">
+                <h2>Your Library</h2>
+                <button class="add-btn">+
+            </div>
+
+            <!-- Scrollable Content -->
+            <div class="library-content">
+                <!-- Create Playlist -->
+                <div class="card">
+                    <h3>Create your first playlist</h3>
+                    <p>It's easy, we'll help you</p>
+                    <button class="white-btn ">Create playlist</button>
+                </div>
+
+                <!-- Find Podcasts -->
+                <div class="card">
+                    <h3>Let's find some songs to follow</h3>
+                    <p>We'll keep you updated on new songs</p>
+                    <button class="white-btn ">Browse All songs</button>
+                </div>
+
+            </div>
+                <!-- Footer -->
+            <div class="library-footer">
+                <div class="footer-links">
+                        <a href="#">Legal</a>
+                        <a href="#">Safety & Privacy Center</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Cookies</a>
+                        <a href="#">About Ads</a>
+                        <a href="#">Accessibility</a>
+                        <a href="#"><strong>Cookies</strong></a>
+                </div>
+
+                <button class="language-btn">
+                    🌐 English
+                </button>
+            </div>
+        </aside>
+        <div class="music-player">
+            <div class="visualizer-bars">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <!-- Left: Song Info -->
+            <div class="player-left">
+                <img id="cover" src="Assets/Zinda.png" alt="Cover Art" />
+                <div class="song-info">
+                    <p id="title"></p>
+                    <span id="artist"></span>
+                </div>
+            </div>
+
+            <!-- Center: Controls -->
+            <div class="player-center">
+                <div class="controls">
+                    <button id="prev">
+                        <svg id="prev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#ffffff" fill="#ffffff">
+                            <path
+                                d="M8.06492 12.6258C8.31931 13.8374 9.67295 14.7077 12.3802 16.4481C15.3247 18.3411 16.797 19.2876 17.9895 18.9229C18.3934 18.7994 18.7654 18.5823 19.0777 18.2876C20 17.4178 20 15.6118 20 12C20 8.38816 20 6.58224 19.0777 5.71235C18.7654 5.41773 18.3934 5.20057 17.9895 5.07707C16.797 4.71243 15.3247 5.6589 12.3802 7.55186C9.67295 9.29233 8.31931 10.1626 8.06492 11.3742C7.97836 11.7865 7.97836 12.2135 8.06492 12.6258Z"
+                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                            <path d="M4 4L4 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+
+                    </button>
+
+                    <button id="play" style="display:inline">
+                        <svg id="play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"
+                            color="#ffffff" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#ffffff" stroke-width="1.5"></circle>
+                            <path
+                                d="M9.5 11.1998V12.8002C9.5 14.3195 9.5 15.0791 9.95576 15.3862C10.4115 15.6932 11.0348 15.3535 12.2815 14.6741L13.7497 13.8738C15.2499 13.0562 16 12.6474 16 12C16 11.3526 15.2499 10.9438 13.7497 10.1262L12.2815 9.32594C11.0348 8.6465 10.4115 8.30678 9.95576 8.61382C9.5 8.92086 9.5 9.6805 9.5 11.1998Z"
+                                fill="#ffffff"></path>
+                        </svg>
+                    </button>
+
+                    <button id="pause" style="display: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"
+                            color="#ffffff" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#ffffff" stroke-width="1.5"></circle>
+                            <path d="M9.5 9L9.5 15M14.5 9V15" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+
+                    <button id="next">
+                        <svg id="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#ffffff" fill="#ffffff">
+                            <path
+                                d="M15.9351 12.6258C15.6807 13.8374 14.327 14.7077 11.6198 16.4481C8.67528 18.3411 7.20303 19.2876 6.01052 18.9229C5.60662 18.7994 5.23463 18.5823 4.92227 18.2876C4 17.4178 4 15.6118 4 12C4 8.38816 4 6.58224 4.92227 5.71235C5.23463 5.41773 5.60662 5.20057 6.01052 5.07707C7.20304 4.71243 8.67528 5.6589 11.6198 7.55186C14.327 9.29233 15.6807 10.1626 15.9351 11.3742C16.0216 11.7865 16.0216 12.2135 15.9351 12.6258Z"
+                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                            <path d="M20 5V19" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path>
+                        </svg>
+                    </button>
+
+                </div>
+                <div class="seek-bar">
+                    <span id="current-time">0:00</span>
+                    <input type="range" id="seek" value="0" min="0" step="1" />
+                    <span id="duration"></span>
+                </div>
+            </div>
+
+            <!-- Right: Volume -->
+            <div class="player-right">
+                <span>
+                    <svg id="music" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                        color="#ffffff" fill="none">
+                        <path
+                            d="M14 14.8135V9.18646C14 6.04126 14 4.46866 13.0747 4.0773C12.1494 3.68593 11.0603 4.79793 8.88232 7.02192C7.75439 8.17365 7.11085 8.42869 5.50604 8.42869C4.10257 8.42869 3.40084 8.42869 2.89675 8.77262C1.85035 9.48655 2.00852 10.882 2.00852 12C2.00852 13.118 1.85035 14.5134 2.89675 15.2274C3.40084 15.5713 4.10257 15.5713 5.50604 15.5713C7.11085 15.5713 7.75439 15.8264 8.88232 16.9781C11.0603 19.2021 12.1494 20.3141 13.0747 19.9227C14 19.5313 14 17.9587 14 14.8135Z"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M17 9C17.6254 9.81968 18 10.8634 18 12C18 13.1366 17.6254 14.1803 17 15"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M20 7C21.2508 8.36613 22 10.1057 22 12C22 13.8943 21.2508 15.6339 20 17"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </span>
+                <input type="range" id="volume" min="0" max="1" step="0.01" value="1" />
+            </div>
+        </div>
+
+        <audio id="audio" preload="auto">
+        </audio>
+
+
+    </div>
+
+    <script src="sidebar.js"></script>
+    <script src="Playlist.js"></script>
+
+
+
+</body>
+
+</html>
+
