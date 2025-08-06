@@ -1,0 +1,16 @@
+[
+  { "title": "Bollywood Workout", "file": "music/Extracted Bollywood Workout/songs_metadata.json" },
+  { "title": "Hindi Hits 1", "file": "music/ExtractedHindi1_16/songs_metadata.json" },
+  { "title": "Hindi Hits 2", "file": "music/ExtractedHindi2_16/songs_metadata.json" },
+  { "title": "International Hits", "file": "music/ExtractedInternat_1_25/songs_metadata.json" },
+  { "title": "Kollywood Hits 1", "file": "music/ExtractedKollywood1_16/songs_metadata.json" },
+  { "title": "Kollywood Hits 2", "file": "music/ExtractedKollywood2_17/songs_metadata.json" },
+  { "title": "Maneskin Collection 1", "file": "music/ExtractedMåneskin_1_15/songs_metadata.json" },
+  { "title": "Maneskin Collection 2", "file": "music/ExtractedManeskin_2_14/songs_metadata.json" },
+  { "title": "Tamil Hits 1", "file": "music/ExtractedTamil1_17/songs_metadata.json" },
+  { "title": "Tamil Hits 2", "file": "music/ExtractedTamil2_17/songs_metadata.json" },
+  { "title": "Top 50 Global 1", "file": "music/ExtractedTop50_1_21/songs_metadata.json" },
+  { "title": "Top 50 Global 2", "file": "music/ExtractedTop50_2_21/songs_metadata.json" },
+  { "title": "Punjabi 1", "file": "music/ExtractedTopPunjabi1_25/songs_metadata.json" },
+  { "title": "Punjabi 2", "file": "music/ExtractedTopPunjabi2_25/songs_metadata.json" }
+]
